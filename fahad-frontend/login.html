@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://kit.fontawesome.com/3624551904.js" crossorigin="anonymous"></script>
+    <title>Log In</title>
+    <style>
+body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.forms {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555555;
+    font-size: 16px;
+}
+
+input[type=email],
+input[type=password] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    border: 0.1px solid #c77dff;
+}
+
+input[type=email]:focus,
+input[type=password]:focus {
+    border-color:#8B85C1;
+}
+
+input[type=submit] {
+    width: 100%;
+    padding: 15px;
+    background-color:#c77dff; /*cdb4db   c77dff*/
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type=submit]:hover {
+    background-color: #9d4edd;
+}
+
+.permission {
+    margin-top: 20px;
+    text-align: center;
+    color: #666666;
+}
+
+.permission a {
+    color:#9d4edd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.permission a:hover {
+    text-decoration: underline;
+    color: #9d4edd;
+}
+</style>  
+</head>
+<body>
+    <form action="#" autocomplete="on" method="post">
+        <div class="forms" style="margin-top: 50px;">
+            <div class="login-tag" style="color: black; font-family:Arial, Helvetica, sans-serif;font-weight: bolder;padding-bottom: 25px;font-size:larger;text-align: center;">LOGIN 🔐</div>
+        <div class="log-in">
+            <div class="l-email">
+                <label for="email">Enter Your Email</label>
+                <input type ="email"  id ="email" name="email" placeholder ="Example@gmail.com..." required>
+            </div>
+            <div class="l-pass">
+                <label for="pass">Enter Your Password</label>
+                <input type="password" id="pass" name="pass" placeholder="password..." required>
+            </div>
+        </div>
+        <div class="l-button">
+            <input type="submit" value="Log in">
+        </div>
+        <div class="permission">
+            <p>Don't have an account?<a href="./signup.html">Sign Up</a></p>
+        </div>
+        </div>
+    </form>
+</body>
+</html>

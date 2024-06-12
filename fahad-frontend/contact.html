@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <title>Contact Page</title>
+     <style>
+        /* Base Styles for the Navigation Bar */
+.navbar {
+  background-color: #333; /* Dark background for the navbar */
+  padding: 10px; /* Padding around the navbar */
+  display: flex;
+  justify-content: center; /* Center the navbar items */
+}
+
+.navbar ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Horizontal alignment */
+}
+
+.nav-item {
+  margin: 0 15px; /* Space between items */
+}
+
+.nav-link {
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 15px; /* Padding around links */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #555; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+}
+
+.nav-link.active {
+  background-color: #555; /* Background color for active link */
+  color: #fff; /* Text color for active link */
+}
+
+.add-to-cart-button {
+  background-color: #ff6347; /* Special color for the cart button */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.add-to-cart-button:hover,
+.add-to-cart-button:focus {
+  background-color: #ff4500; /* Darker color on hover */
+} -->
+
+<!-- .fa-cart-shopping {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: flex-start; /* Align items to the start on small screens */
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Vertical alignment */
+    align-items: flex-start; /* Align links to the start */
+  }
+
+  .nav-item {
+    margin: 5px 0; /* Space between items vertically */
+  }
+}
+
+    </style>
+  </head>
+  <body >
+    <nav   class="navbar">
+        <ul>
+          <li class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">about</a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">products</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">contact</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="addToCart.html"
+              class="nav-link add-to-cart-button"
+              id="cartValue"
+            >
+              <i class="fa-solid fa-cart-shopping"> 0 </i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1 class="display-3 mb-5">Contact Form</h1>
+        </div>
+        <div class="main row justify-content-center">
+            <form action="" id="student-form" class="row justify-content-center mb-4" autocomplete="off">
+                <div class="col-10 mb-3">
+                    <label   for="firstname">Firstname</label>
+                    <input style=" font-size: 13px; height: 40px; border-color: #342a40;" class="form-control border border-dark " type="text" id="firstname" placeholder="Enter first name">
+                </div>
+                <div class="col-10 mb-3">
+                    <label for="firstname">Lastname</label>
+                    <input style="font-size: 13px; height: 40px; border-color: #342a40;" class="form-control border border-dark" type="text" id="lastname" placeholder="Enter last name">
+                </div>
+                <div class="col-10 mb-3">
+                    <label for="firstname">Email</label>
+                    <input style="font-size: 13px;  height: 40px; border-color: #342a40;" class="form-control border border-dark" type="email" id="email" placeholder="Enter email">
+                </div>
+                <div class="col-10 mb-3">
+                    <label for="firstname">Message</label>
+                    <input style="font-size: 13px;  height: 40px; border-color: #342a40;" class="form-control border border-dark" type="text" id="message" placeholder="Write message...">
+                </div>
+                <div class="col-5">
+                <input style="font-size: 13px;  height: 40px; font-size: 15px;" class="btn btn-success add-btn" type="submit" value="submit">
+                </div>
+            </form>
+            <div  class="col-12 mt-5">
+                <table  class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th style="font-size: 13px;">Firstname</th>
+                            <th style="font-size: 13px;">Lastname</th>
+                            <th style="font-size: 13px;">Email</th>
+                            <th style="font-size: 13px;">Message</th>
+                            <th style="font-size: 13px;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="student-list">
+                        <!-- <tr>
+                            <td>Dear</td>
+                            <td>programmer</td>
+                            <td>fahad@gmail.com</td>
+                            <td>Mt name is fahad</td>
+                            <td>
+                                <a href="" class="btn btn-warning btn-sm edit">Edit</a>
+                                <a href="" class="btn btn-danger btn-sm delete">Delete</a>
+
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+    <footer class="section-footer">
+        <div class="footer-container container">
+          <div class="content_1">
+            <img src="./public/images/logo.ai1.png" alt="logo" />
+            <p>
+              Welcome to Shopfinity EcomStore, your ultimate destination for
+              cutting-edge gadgets!
+            </p>
+            <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
+          </div>
+          <div class="content_2">
+            <h4>SHOPPING</h4>
+            <a href="#">Computer Store</a>
+            <a href="#">Laptop Store</a>
+            <a href="#">Accessories</a>
+            <a href="#">Sales & Discount</a>
+          </div>
+          <div class="content_3">
+            <h4>Experience</h4>
+            <a href="./contact.html">Contact Us</a>
+            <a href="" target="_blank">Payment Method</a>
+            <a href="" target="_blank">Delivery</a>
+            <a href="" target="_blank">Return and Exchange</a>
+          </div>
+          <div class="content_4">
+            <h4>NEWSLETTER</h4>
+            <p>Be the first to know about new<br />arrivals, sales & promos!</p>
+            <div class="f-mail">
+              <input type="email" placeholder="Your Email" />
+              <i class="bx bx-envelope"></i>
+            </div>
+            <hr />
+          </div>
+        </div>
+        <div class="f-design">
+          <div class="f-design-txt">
+            <p>Design and Code by Shopfinity</p>
+          </div>
+        </div>
+      </footer>
+  
+   <script>
+   
+
+
+    var selectedRow = null;
+
+function showAlert(message, className) {
+    const div = document.createElement("div");
+    div.className = `alert alert-${className}`;
+    div.appendChild(document.createTextNode(message));
+    const container = document.querySelector(".container");
+    const main = document.querySelector(".main");
+    container.insertBefore(div, main);
+    setTimeout(() => document.querySelector(".alert").remove(), 3000);
+}
+
+function clearFields() {
+    document.getElementById("firstname").value = "";
+    document.getElementById("lastname").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+}
+
+document.getElementById("student-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const firstName = document.getElementById("firstname").value;
+    const lastName = document.getElementById("lastname").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    if (firstName === "" || lastName === "" || email === "" || message === "") {
+        showAlert("Please fill all fields", "danger");
+    } else {
+        if (selectedRow == null) {
+            const list = document.querySelector(".student-list");
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${firstName}</td>
+                <td>${lastName}</td>
+                <td>${email}</td>
+                <td>${message}</td>
+                <td>
+                    <button class="btn btn-warning btn-sm edit">Edit</button>
+                    <button class="btn btn-danger btn-sm delete">Delete</button>
+                </td>
+            `;
+            list.appendChild(row);
+            showAlert("Data Added", "success");
+        } else {
+            selectedRow.children[0].textContent = firstName;
+            selectedRow.children[1].textContent = lastName;
+            selectedRow.children[2].textContent = email;
+            selectedRow.children[3].textContent = message;
+            selectedRow = null;
+            showAlert("Customer Data Edited", "info");
+        }
+        clearFields();
+    }
+});
+
+document.querySelector(".student-list").addEventListener("click", function(e) {
+    const target = e.target;
+    if (target.classList.contains("edit")) {
+        selectedRow = target.parentElement.parentElement;
+        document.getElementById("firstname").value = selectedRow.children[0].textContent;
+        document.getElementById("lastname").value = selectedRow.children[1].textContent;
+        document.getElementById("email").value = selectedRow.children[2].textContent;
+        document.getElementById("message").value = selectedRow.children[3].textContent;
+    } else if (target.classList.contains("delete")) {
+        target.parentElement.parentElement.remove();
+        showAlert("Student data Deleted", "danger");
+    }
+});
+//     var selectedRow = null;
+
+// function showAlert(message, className) {
+//     const div = document.createElement("div");
+//     div.className = `alert alert-${className}`;
+//     div.appendChild(document.createTextNode(message));
+//     const container = document.querySelector(".container");
+//     const main = document.querySelector(".main");
+//     container.insertBefore(div, main);
+//     setTimeout(() => document.querySelector(".alert").remove(), 3000);
+// }
+
+// // Clear all fields
+// function clearFields() {
+//     document.querySelector("#firstname").value = "";
+//     document.querySelector("#lastname").value = "";
+//     document.querySelector("#email").value = "";
+//     document.querySelector("#message").value = "";
+// }
+
+// // Handle form submission
+// document.querySelector("#student-form").addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     // Get form values
+//     const firstName = document.querySelector("#firstname").value;
+//     const lastName = document.querySelector("#lastname").value;
+//     const email = document.querySelector("#email").value;
+//     const message = document.querySelector("#message").value;
+//     // Validate
+//     if (firstName === "" || lastName === "" || email === "" || message === "") {
+//         showAlert("Please fill all fields", "danger");
+//     }
+//     else {
+//             if (selectedRow == null) {
+//                 const list = document.querySelector(".student-list");
+//                 const row = document.createElement("tr");
+//                 row.innerHTML = `
+//                     <td>${firstName}</td>
+//                     <td>${lastName}</td>
+//                     <td>${email}</td>
+//                     <td>${message}</td>
+//                     <td>
+//                         <a href="#" class="btn btn-warning btn-sm edit">Edit</a>
+//                         <a href="#" class="btn btn-danger btn-sm delete">Delete</a>
+//                     </td>
+//                 `;
+//                 list.appendChild(row);
+//                 showAlert("Data Added", "success");
+                
+//             }
+//             else{
+//                 selectedRow.children[0].textContent=firstName;
+//                 selectedRow.children[1].textContent=lastName;
+//                 selectedRow.children[2].textContent=email;
+//                 selectedRow.children[3].textContent=message;
+//                 selectedRow=null;
+//                 showAlert("Customer Data Edited", "info")
+//             }
+//             clearFields();
+//     }
+// });
+// //edit data
+// document.querySelector("#student-list".addEventListener("click",(e)=>{
+//     target=e.target;
+//     if(target.classList.contains("edit")){
+//         selectedRow=target.parentElement.parentElement;
+//         document.querySelector("#firstname").value=selectedRow.children[0].textContent;
+//         document.querySelector("#lastname").value=selectedRow.children[1].textContent;
+//         document.querySelector("#email").value=selectedRow.children[2].textContent;
+//         document.querySelector("#message").value=selectedRow.children[3].textContent;
+//     }
+// }))
+
+// // Delete event
+// document.querySelector(".student-list").addEventListener("click", (e) => {
+//     const target = e.target;
+//     if (target.classList.contains("delete")) {
+//         target.parentElement.parentElement.remove();
+//         showAlert("Student data Deleted", "danger");
+//     }
+// });
+   </script>
+   
+  </body>
+</html>
